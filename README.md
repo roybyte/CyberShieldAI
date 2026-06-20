@@ -1,31 +1,38 @@
-# CyberShieldAI
+CyberShieldAI
 
-CyberShieldAI is a phishing URL detection tool built using Python and Flask. The project analyzes URLs and helps identify potentially suspicious or malicious websites using domain-based security checks.
+CyberShieldAI is a simple phishing detection web application built using Python, Flask, HTML, CSS and JavaScript.
 
-## Features
+Features
 
-- URL analysis
-- Domain age checking
-- Trusted domain detection
-- Simple web interface
+- Detects suspicious phishing keywords
+- Checks for unknown links
+- Calculates phishing risk score
+- Displays risk percentage
+- Shows detected suspicious words
+- Fetches domain creation date using WHOIS
 
-## Technologies Used
+Technologies Used
 
 - Python
 - Flask
 - HTML
-- Whois
-- tldextract
+- CSS
+- JavaScript
+- WHOIS
+- TLDExtract
 
-## Future Improvements
+How It Works
 
-- SSL Certificate Verification
-- IP Address Detection
-- URL Shortener Detection
-- VirusTotal API Integration
-- Advanced Threat Scoring
+The user enters a message or URL. The application analyzes the content for phishing indicators and calculates a risk score. If suspicious keywords or unknown links are detected, the message is flagged as a potential phishing attempt.
 
-## Author
+Future Improvements
+
+- Machine Learning based detection
+- URL reputation analysis
+- VirusTotal API integration
+- Better phishing classification
+- Modern dashboard UI
+
+Author
 
 Ankit Roy
-BCA Student | Cybersecurity & Cloud Security Enthusiast
