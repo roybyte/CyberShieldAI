@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>CyberShield AI</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f5f5f5;
+        }
+
+        h1{
+            color: #333;
+        }
+
+        textarea{
+            width: 700px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button{
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover{
+            opacity: 0.9;
+        }
+
+        #result{
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>CyberShield AI</h1>
+
+    <textarea
+        id="msg"
+        rows="6"
+        placeholder="Paste suspicious message here">
+    </textarea>
+
+    <br><br>
+
+    <button onclick="checkMessage()">
+        Check Message
+    </button>
+
+    <h2 id="result"></h2>
+
+    <script>
+
+        async function checkMessage() {
+
+            let text = document.getElementById("msg").value;
+
+            let response = await fetch(
+                "http://127.0.0.1:5000/check",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        message: text
+                    })
+                }
+            );
+
+            let data = await response.json();
+
+            let resultBox =
+                document.getElementById("result");
+
+            if(data.result === "Potential Phishing"){
+                resultBox.style.color = "red";
+            }
+            else{
+                resultBox.style.color = "green";
+            }
+
+            resultBox.innerHTML =
+                data.result +
+                "<br>Risk Score: " + data.risk_score +
+                "<br>Risk Percentage: " + data.risk_percent + "%" +
+                "<br>Detected Words: " +
+                data.detected_words.join(", ");
+        }
+
+    </script>
+
+</body>
+</html>
