@@ -1,38 +1,61 @@
-CyberShieldAI
+# CyberShield AI
 
-CyberShieldAI is a simple phishing detection web application built using Python, Flask, HTML, CSS and JavaScript.
+CyberShield AI is a phishing detection tool built using Python and Flask. It analyzes URLs and email addresses to identify potential phishing attempts using multiple security indicators.
 
-Features
+## Features
 
-- Detects suspicious phishing keywords
-- Checks for unknown links
-- Calculates phishing risk score
-- Displays risk percentage
-- Shows detected suspicious words
-- Fetches domain creation date using WHOIS
+- URL phishing detection
+- Email phishing detection
+- Brand impersonation detection
+- Free email provider detection
+- Domain age analysis
+- Registrar information lookup
+- Country detection
+- VirusTotal reputation analysis
+- Risk scoring system
+- Human-readable explanations for detections
 
-Technologies Used
+## Technologies Used
 
 - Python
 - Flask
 - HTML
 - CSS
 - JavaScript
+- VirusTotal API
 - WHOIS
-- TLDExtract
 
-How It Works
+## How It Works
 
-The user enters a message or URL. The application analyzes the content for phishing indicators and calculates a risk score. If suspicious keywords or unknown links are detected, the message is flagged as a potential phishing attempt.
+CyberShield AI evaluates multiple indicators such as:
 
-Future Improvements
+- Suspicious keywords
+- Newly registered domains
+- Fake brand emails
+- Free email providers
+- VirusTotal detections
+- Suspicious TLDs
+- Login and credential harvesting patterns
 
-- Machine Learning based detection
-- URL reputation analysis
-- VirusTotal API integration
-- Better phishing classification
-- Modern dashboard UI
+The system calculates a risk score and provides detailed explanations for why a URL or email was flagged.
 
-Author
+## Example Detection
 
-Ankit Roy
+Input:
+
+support-paypal@gmail.com
+
+Output:
+
+- Risk Score: 7
+- Risk Percentage: 84%
+- Possible Fake PayPal Email
+- Free Email Provider
+- Detailed Explanation
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/roybyte/CyberShieldAI.git
