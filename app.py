@@ -4,6 +4,7 @@ import whois
 import tldextract
 import requests
 import base64
+import os
 
 from datetime import datetime
 from urllib.parse import urlparse
@@ -13,7 +14,7 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
-VT_API_KEY = "9923huiy8r2ud88r8y993e993ru8ru9iihg.env"
+VT_API_KEY = os.getenv("VT_API_KEY")
 
 
 @app.route("/")
