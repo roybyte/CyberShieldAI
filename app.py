@@ -13,7 +13,7 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
-VT_API_KEY = "dac47226648af616d4069c63c400b2d18fdbe36ea739bca664c7e597283b694a"
+VT_API_KEY = "9923huiy8r2ud88r8y993e993ru8ru9iihg.env"
 
 
 @app.route("/")
