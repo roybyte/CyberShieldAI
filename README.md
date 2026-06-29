@@ -1,16 +1,24 @@
-# CyberShield AI
+CyberShield AI
 
 AI-powered phishing detection platform that analyzes URLs and emails using WHOIS intelligence, VirusTotal reputation data, and custom security heuristics.
 
-## Overview
+Live Demo
 
-CyberShield AI is a security-focused web application built using Python and Flask. It helps users identify potentially malicious URLs and phishing emails by combining domain intelligence, reputation analysis, and rule-based threat detection techniques.
+Try the project here:
 
-The system analyzes multiple indicators and generates a risk score along with detailed explanations describing why a URL or email has been flagged.
+https://roybyte.github.io/CyberShieldAI/
 
 ---
 
-## Features
+Overview
+
+CyberShield AI is a phishing detection web application built using Python and Flask. It helps identify malicious URLs and phishing emails by combining multiple security indicators such as WHOIS information, VirusTotal reputation analysis, domain intelligence, and rule-based detection.
+
+The application calculates a risk score, assigns a threat level, and explains exactly why a URL or email has been flagged.
+
+---
+
+Features
 
 - Real-time URL phishing analysis
 - Email phishing detection
@@ -18,16 +26,15 @@ The system analyzes multiple indicators and generates a risk score along with de
 - Free email provider detection
 - Domain age verification
 - Registrar lookup
-- Country lookup
+- Country detection
 - VirusTotal reputation analysis
-- Suspicious TLD detection
+- Suspicious domain extension detection
 - Risk scoring engine
-- Detailed threat explanations
-- Human-readable security reports
+- Human-readable threat explanations
 
 ---
 
-## Technologies Used
+Technologies Used
 
 - Python
 - Flask
@@ -39,107 +46,98 @@ The system analyzes multiple indicators and generates a risk score along with de
 
 ---
 
-## How It Works
+How It Works
 
-CyberShield AI evaluates multiple indicators such as:
+CyberShield AI analyzes multiple indicators, including:
 
 - Suspicious keywords
 - Newly registered domains
 - Fake brand emails
 - Free email providers
 - VirusTotal detections
-- Suspicious domain extensions
+- Suspicious TLDs
 - Login and credential harvesting patterns
 - Brand impersonation attempts
 
-The system calculates a risk score and provides detailed explanations for why a URL or email was flagged.
+The system combines these indicators into a risk score and generates an explanation describing why the content is considered suspicious.
 
 ---
 
-## Example Detection
+Example Detection
 
-### Input
+Input
 
-```
 support-paypal@gmail.com
-```
 
-### Output
+Output
 
 - Risk Score: 7
 - Risk Percentage: 84%
 - Possible Fake PayPal Email
 - Free Email Provider
-- Detailed Explanation
 
-### Why Flagged
+Why Flagged
 
 - This email pretends to represent PayPal while using a free email provider.
 - Legitimate companies usually do not use free email services for official communication.
 
 ---
 
-## Screenshots
+Screenshots
 
-### URL Analysis
+URL Analysis
 
-![URL Analysis](screenshots/url-analysis.png)
+Place your screenshot here:
 
-### Email Analysis
+screenshots/url-analysis.png
 
-![Email Analysis](screenshots/email-analysis.png)
+Email Analysis
+
+Place your screenshot here:
+
+screenshots/email-analysis.png
 
 ---
 
-## Installation
+Installation
 
-### Clone the repository
+Clone the repository
 
-```bash
 git clone https://github.com/roybyte/CyberShieldAI.git
-```
 
-### Move into the project directory
+Move into the project directory
 
-```bash
 cd CyberShieldAI
-```
 
-### Install dependencies
+Install dependencies
 
-```bash
 pip install -r requirements.txt
-```
 
-### Run the application
+Run the application
 
-```bash
 python app.py
-```
 
-### Open in browser
+Open
 
-```text
 http://127.0.0.1:5000
-```
 
 ---
 
-## Future Improvements
+Future Improvements
 
 - Machine Learning based phishing detection
 - Email header analysis
 - QR code phishing detection
-- Real-time threat intelligence feeds
-- User authentication and dashboard
-- SOC analyst reporting dashboard
-- Detection history and analytics
+- Threat intelligence feeds
+- Detection history
+- User authentication
+- Dashboard and analytics
 
 ---
 
-## Author
+Author
 
-**Ankit Roy**
+Ankit Roy
 
 BCA Student | Cybersecurity Enthusiast | Cloud Security Learner
 
